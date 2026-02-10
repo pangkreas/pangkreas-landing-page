@@ -12,12 +12,13 @@ interface SelectProps {
   onChange: (value: string) => void;
   placeholder?: string;
   label?: string;
+  className?: string;
 }
 
 /**
  * Accessible custom Select component.
  */
-export function Select({ options, value, onChange, placeholder = 'Select an option', label }: SelectProps) {
+export function Select({ options, value, onChange, placeholder = 'Select an option', label, className }: SelectProps) {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   
@@ -34,7 +35,7 @@ export function Select({ options, value, onChange, placeholder = 'Select an opti
   }, []);
 
   return (
-    <div className="flex flex-col gap-1 w-full" ref={containerRef}>
+    <div className={`flex flex-col gap-1 w-full ${className ?? ""}`} ref={containerRef}>
       {label && <label className="text-sm font-medium text-gray-700">{label}</label>}
       <div className="relative">
         <button

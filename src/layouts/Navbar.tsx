@@ -4,21 +4,21 @@ export default function Navbar() {
   return (
     <nav className="hidden items-center gap-8 md:flex">
       <Link
-        to="/#services"
+        to="/services"
         className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors"
       >
         Services
       </Link>
 
       <Link
-        to="/#projects"
+        to="/projects"
         className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors"
       >
         Work
       </Link>
 
       <Link
-        to="/#process"
+        to="/process"
         className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors"
       >
         Process

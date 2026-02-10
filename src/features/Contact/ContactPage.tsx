@@ -1,15 +1,17 @@
 import { useState } from "react";
-import { Button, Card, CardContent, Input, Textarea, Badge } from "@/components/ui";
+import { Button, Card, CardContent, Input, Textarea, Badge, Select } from "@/components/ui";
 
 type FormState = {
   name: string;
   email: string;
+  projectType: string;
   message: string;
 };
 
 const initialForm: FormState = {
   name: "",
   email: "",
+  projectType: "",
   message: "",
 };
 
@@ -35,6 +37,19 @@ export default function ContactPage() {
     }
   };
 
+  const handleSelectChange = (value: string) => {
+    setFormData((prev) => ({ ...prev, projectType: value }));
+
+    if (errors.projectType) {
+      setErrors((prev) => {
+        const copy = { ...prev };
+        delete copy.projectType;
+        return copy;
+      });
+    }
+  };
+
+
   const validate = () => {
     const newErrors: Record<string, string> = {};
 
@@ -45,6 +60,8 @@ export default function ContactPage() {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Email is invalid";
     }
+
+    if (!formData.projectType) newErrors.projectType = "Please select project type";
 
     if (!formData.message.trim()) newErrors.message = "Message is required";
 
@@ -116,6 +133,22 @@ export default function ContactPage() {
                   error={errors.email}
                   required
                 />
+
+                <div className="flex flex-col gap-1">
+                  <label className="text-sm font-medium text-gray-700">Project Type</label>
+                  <Select
+                    label="Project Type"
+                    value={formData.projectType}
+                    onChange={handleSelectChange}
+                    options={[
+                      { value: "web-app", label: "Web / SaaS App" },
+                      { value: "automation", label: "Automation / Bot" },
+                      { value: "cms", label: "Internal Tools / CMS" },
+                      { value: "other", label: "Not sure yet" },
+                    ]}
+                  />
+                </div>
+
 
                 <div className="flex flex-col gap-1">
                   <label className="text-sm font-medium text-gray-700">Message</label>
