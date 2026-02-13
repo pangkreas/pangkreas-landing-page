@@ -1,5 +1,7 @@
 import { Card, CardContent, Badge, Button } from "@/components/ui";
 import { useNavigate } from "react-router-dom";
+import Container from "@/components/layout/Container";
+import usePageTitle from "@/hooks/usePageTitle";
 
 const projects = [
   {
@@ -42,67 +44,72 @@ const projects = [
 
 export default function ProjectsPage() {
   const navigate = useNavigate();
+  usePageTitle("Work");
 
   return (
     <div className="flex flex-col">
       {/* HERO */}
-      <section className="px-6 pt-24 pb-20 text-center md:px-12">
-        <div className="mx-auto max-w-3xl">
+      <section className="py-24 pb-16">
+        <Container className="mx-auto max-w-3xl">
           <h1 className="mb-6 text-5xl font-bold text-slate-900">
             Selected Work
           </h1>
           <p className="text-lg text-slate-600">
-            Examples of digital products and automation we helped build.
+            A selection of apps, automation, and internal tools we've helped bring to life.
           </p>
-        </div>
+        </Container>
       </section>
 
       {/* PROJECT GRID */}
-      <section className="bg-slate-50 px-6 py-24 md:px-12">
-        <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3">
-          {projects.map((project) => (
-            <Card key={project.title} className="bg-white hover:shadow-lg transition">
-              <CardContent className="p-6">
-                <Badge className="mb-4 bg-indigo-50 text-indigo-700 border-indigo-100">
-                  {project.category}
-                </Badge>
+      <section className="bg-slate-50 py-24 border-t border-slate-100">
+        <Container>
+          <div className="grid gap-8 md:grid-cols-3">
+            {projects.map((project) => (
+              <Card key={project.title} className="bg-white border border-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <CardContent className="p-6">
+                  <Badge className="mb-4 bg-indigo-50 text-indigo-700 border-indigo-100">
+                    {project.category}
+                  </Badge>
 
-                <h3 className="mb-3 text-xl font-bold text-slate-900">
-                  {project.title}
-                </h3>
+                  <h3 className="mb-3 text-xl font-bold text-slate-900">
+                    {project.title}
+                  </h3>
 
-                <p className="mb-6 text-sm text-slate-600">
-                  {project.desc}
-                </p>
+                  <p className="mb-6 text-sm text-slate-600">
+                    {project.desc}
+                  </p>
 
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="rounded-md bg-slate-100 px-2 py-1 text-xs text-slate-600"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-md bg-slate-100 px-2 py-1 text-xs text-slate-600"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </Container>
       </section>
 
       {/* CTA */}
-      <section className="bg-indigo-600 px-6 py-24 text-center text-white">
-        <h2 className="mb-6 text-4xl font-bold">
-          Want to build something similar?
-        </h2>
+      <section className="bg-gradient-to-r from-indigo-600 to-indigo-500 py-24 text-center text-white">
+        <Container>
+          <h2 className="mb-6 text-4xl font-bold">
+            Want to build something similar?
+          </h2>
 
-        <Button
-          onClick={() => navigate("/contact")}
-          className="!bg-white !text-indigo-600 hover:!bg-indigo-50 px-8 py-4 text-lg font-semibold"
-        >
-          Start a Project
-        </Button>
+          <Button
+            onClick={() => navigate("/contact")}
+            className="!bg-white !text-indigo-600 hover:!bg-indigo-50 px-8 py-4 text-lg font-semibold"
+          >
+            Start a Project
+          </Button>
+        </Container>
       </section>
     </div>
   );

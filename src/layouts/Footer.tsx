@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import Container from "@/components/layout/Container";
 
 export default function Footer() {
   return (
-    <footer className="border-t bg-slate-50 px-6 py-12 md:px-12">
-      <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
+    <footer className="border-t bg-slate-50 py-12">
+      <Container className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
         <div>
           <span className="text-xl font-bold text-slate-900">Pangkreas</span>
           <p className="max-w-xs text-sm text-slate-500">
@@ -19,7 +20,7 @@ export default function Footer() {
         <div className="text-sm text-slate-400">
           © {new Date().getFullYear()} Pangkreas
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

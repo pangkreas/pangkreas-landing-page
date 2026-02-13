@@ -1,4 +1,6 @@
 import { Card, CardContent, Badge } from "@/components/ui";
+import Container from "@/components/layout/Container";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -23,11 +25,10 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="bg-slate-50 px-6 py-24 md:px-12">
-      <div className="mx-auto max-w-7xl">
-        
+    <section id="projects" className="py-24">
+      <Container>
         {/* Heading */}
-        <div className="mb-16">
+        <div className="mb-20">
           <h2 className="mb-4 text-3xl font-bold text-slate-900">
             Selected Work
           </h2>
@@ -41,9 +42,9 @@ export default function ProjectsSection() {
           {projects.map((project) => (
             <Card
               key={project.title}
-              className="bg-white transition-all hover:-translate-y-1 hover:shadow-lg"
+              className="bg-white border border-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
-              <CardContent className="p-6">
+              <CardContent className="p-8">
                 
                 <Badge className="mb-4 bg-indigo-50 text-indigo-700 border-indigo-100">
                   {project.category}
@@ -71,7 +72,16 @@ export default function ProjectsSection() {
             </Card>
           ))}
         </div>
-      </div>
+
+        <div className="mt-16 text-center">
+          <Link
+            to="/work"
+            className="text-sm font-semibold text-indigo-600 hover:text-indigo-700"
+          >
+            View all projects →
+          </Link>
+        </div>
+      </Container>
     </section>
   );
 }

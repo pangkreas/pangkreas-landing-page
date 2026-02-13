@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Button, Card, CardContent, Input, Textarea, Badge, Select } from "@/components/ui";
+import Container from "@/components/layout/Container";
+import usePageTitle from "@/hooks/usePageTitle";
 
 type FormState = {
   name: string;
@@ -20,6 +22,7 @@ export default function ContactPage() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  usePageTitle("Contact");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -84,96 +87,124 @@ export default function ContactPage() {
   };
 
   return (
-    <section className="flex min-h-[calc(100vh-64px)] items-center justify-center bg-slate-50 px-6 py-12">
-      <div className="grid w-full max-w-4xl grid-cols-1 items-center gap-12 lg:grid-cols-2">
-        
-        {/* Left content */}
-        <div>
-          <Badge className="mb-4 border-indigo-100 bg-indigo-50 text-indigo-700">
-            Get in touch
-          </Badge>
+    <section className="bg-slate-50 flex flex-1 items-center">
+      <Container>
+        <div className="grid w-full max-w-4xl grid-cols-1 items-center gap-12 lg:grid-cols-2">
+          
+          {/* Left content */}
+          <div>
+            <Badge className="mb-4 border-indigo-100 bg-indigo-50 text-indigo-700">
+              Get in touch
+            </Badge>
 
-          <h1 className="mb-6 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
-            Tell us about your <span className="text-indigo-600">next project.</span>
-          </h1>
+            <h1 className="mb-6 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+              Tell us about your <span className="text-indigo-600">next project.</span>
+            </h1>
 
-          <p className="mb-8 text-lg leading-relaxed text-slate-600">
-            We are currently accepting new projects and partnerships.
-          </p>
+            <p className="mb-10 text-lg leading-relaxed text-slate-600">
+              Share your idea, goals, or challenges. We usually respond within 24 hours.
+            </p>
 
-          <p className="font-medium text-slate-600">
-            hello@pangkreas.com
-          </p>
-        </div>
-
-        {/* Form card */}
-        <Card className="border-slate-200 shadow-xl shadow-slate-200/50">
-          <CardContent className="p-8">
-            {isSubmitted ? (
-              <SuccessState onReset={() => setIsSubmitted(false)} />
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <Input
-                  label="Name"
-                  name="name"
-                  placeholder="Your name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  error={errors.name}
-                  required
-                />
-
-                <Input
-                  label="Email"
-                  name="email"
-                  type="email"
-                  placeholder="name@company.com"
-                  value={formData.email}
-                  onChange={handleChange}
-                  error={errors.email}
-                  required
-                />
-
-                <div className="flex flex-col gap-1">
-                  <label className="text-sm font-medium text-gray-700">Project Type</label>
-                  <Select
-                    label="Project Type"
-                    value={formData.projectType}
-                    onChange={handleSelectChange}
-                    options={[
-                      { value: "web-app", label: "Web / SaaS App" },
-                      { value: "automation", label: "Automation / Bot" },
-                      { value: "cms", label: "Internal Tools / CMS" },
-                      { value: "other", label: "Not sure yet" },
-                    ]}
-                  />
+            <div className="space-y-4 text-sm text-slate-600">
+              <div className="flex items-center gap-3">
+                <div className="h-8 w-8 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600">
+                  ✓
                 </div>
+                Free consultation
+              </div>
 
+              <div className="flex items-center gap-3">
+                <div className="h-8 w-8 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600">
+                  ✓
+                </div>
+                Transparent pricing
+              </div>
 
-                <div className="flex flex-col gap-1">
-                  <label className="text-sm font-medium text-gray-700">Message</label>
-                  <Textarea
-                    name="message"
-                    className={`min-h-[150px] ${
-                      errors.message ? "border-red-500 ring-red-500" : ""
-                    }`}
-                    placeholder="Briefly describe your idea..."
-                    value={formData.message}
+              <div className="flex items-center gap-3">
+                <div className="h-8 w-8 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600">
+                  ✓
+                </div>
+                Friendly & fast response
+              </div>
+            </div>
+
+            <p className="mt-8 font-medium text-slate-700">
+              hello@pangkreas.com
+            </p>
+          </div>
+
+          {/* Form card */}
+          <Card className="border-slate-200 shadow-2xl shadow-slate-200/60">
+            <CardContent className="p-8">
+              {isSubmitted ? (
+                <SuccessState onReset={() => setIsSubmitted(false)} />
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <Input
+                    label="Name"
+                    name="name"
+                    placeholder="Your name"
+                    value={formData.name}
                     onChange={handleChange}
+                    error={errors.name}
+                    required
                   />
-                  {errors.message && (
-                    <span className="text-xs text-red-600">{errors.message}</span>
-                  )}
-                </div>
 
-                <Button type="submit" className="h-12 w-full text-base font-bold" disabled={isSubmitting}>
-                  {isSubmitting ? "Sending..." : "Submit Inquiry"}
-                </Button>
-              </form>
-            )}
-          </CardContent>
-        </Card>
-      </div>
+                  <Input
+                    label="Email"
+                    name="email"
+                    type="email"
+                    placeholder="name@company.com"
+                    value={formData.email}
+                    onChange={handleChange}
+                    error={errors.email}
+                    required
+                  />
+
+                  <div className="flex flex-col gap-1">
+                    <label className="text-sm font-medium text-gray-700">Project Type</label>
+                    <Select
+                      label="Project Type"
+                      value={formData.projectType}
+                      onChange={handleSelectChange}
+                      options={[
+                        { value: "web-app", label: "Web / SaaS App" },
+                        { value: "automation", label: "Automation / Bot" },
+                        { value: "cms", label: "Internal Tools / CMS" },
+                        { value: "other", label: "Not sure yet" },
+                      ]}
+                    />
+                  </div>
+
+
+                  <div className="flex flex-col gap-1">
+                    <label className="text-sm font-medium text-gray-700">Message</label>
+                    <Textarea
+                      name="message"
+                      className={`min-h-[150px] ${
+                        errors.message ? "border-red-500 ring-red-500" : ""
+                      }`}
+                      placeholder="Briefly describe your idea..."
+                      value={formData.message}
+                      onChange={handleChange}
+                    />
+                    {errors.message && (
+                      <span className="text-xs text-red-600">{errors.message}</span>
+                    )}
+                  </div>
+
+                  <Button 
+                    type="submit" 
+                    className="h-12 w-full text-base font-bold transition-all hover:scale-[1.02]" 
+                    disabled={isSubmitting}>
+                    {isSubmitting ? "Sending..." : "Submit Inquiry"}
+                  </Button>
+                </form>
+              )}
+            </CardContent>
+          </Card>
+        </div>
+      </Container>
     </section>
   );
 }
@@ -182,10 +213,18 @@ export default function ContactPage() {
 function SuccessState({ onReset }: { onReset: () => void }) {
   return (
     <div className="py-8 text-center">
-      <h3 className="mb-2 text-2xl font-bold text-slate-900">Inquiry Sent 🎉</h3>
-      <p className="mb-6 text-slate-600">We’ll get back to you soon.</p>
+      <div className="mb-6 text-5xl">🎉</div>
+
+      <h3 className="mb-2 text-2xl font-bold text-slate-900">
+        Inquiry Sent!
+      </h3>
+
+      <p className="mb-8 text-slate-600">
+        Thanks for reaching out. We’ll reply within 24 hours.
+      </p>
+
       <Button variant="outline" className="w-full" onClick={onReset}>
-        Send Another
+        Send Another Message
       </Button>
     </div>
   );

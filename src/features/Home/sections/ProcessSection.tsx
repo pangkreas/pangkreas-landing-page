@@ -1,3 +1,6 @@
+import Container from "@/components/layout/Container";
+import { Link } from "react-router-dom";
+
 const steps = [
   {
     title: "Understand",
@@ -15,20 +18,32 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section id="process" className="border-b border-slate-100 bg-white px-6 py-24 md:px-12">
-      <div className="mx-auto max-w-7xl text-center">
-        <h2 className="mb-20 text-4xl font-bold text-slate-900">Our Process</h2>
+    <section id="process" className="py-24">
+      <Container className="text-center">
+        <h2 className="mb-4 text-4xl font-bold text-slate-900">Our Process</h2>
+        <p className="mb-20 text-slate-600 max-w-xl mx-auto">
+          A simple, builder-first workflow designed to turn ideas into shipped products.
+        </p>
 
         <div className="grid gap-12 md:grid-cols-3">
           {steps.map((step, i) => (
-            <div key={step.title}>
-              <div className="mb-6 text-4xl font-bold text-indigo-600">0{i + 1}</div>
+            <div className="rounded-xl border border-slate-200 p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" key={step.title}>
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-indigo-50 text-indigo-600 font-bold mx-auto">0{i + 1}</div>
               <h3 className="mb-3 text-2xl font-bold text-slate-900">{step.title}</h3>
               <p className="text-slate-600">{step.desc}</p>
             </div>
           ))}
         </div>
-      </div>
+
+        <div className="mt-16">
+          <Link
+            to="/process"
+            className="text-sm font-semibold text-indigo-600 hover:text-indigo-700"
+          >
+            Learn more about our process →
+          </Link>
+        </div>
+      </Container>
     </section>
   );
 }
