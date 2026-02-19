@@ -2,49 +2,61 @@ import { Card, CardContent, Badge, Button } from "@/components/ui";
 import { useNavigate } from "react-router-dom";
 import Container from "@/components/layout/Container";
 import usePageTitle from "@/hooks/usePageTitle";
+import { useFeaturedProjects } from "./hooks/useFeaturedProjects";
 
-const projects = [
-  {
-    title: "Inventory Management Dashboard",
-    category: "Web App",
-    desc: "Custom dashboard for stock tracking, reporting, and analytics.",
-    tech: ["React", "Laravel", "MySQL"],
-  },
-  {
-    title: "Marketplace Automation Bot",
-    category: "Automation",
-    desc: "Automation for product monitoring and order workflow.",
-    tech: ["Python", "API Integration"],
-  },
-  {
-    title: "Internal CRM System",
-    category: "Web System",
-    desc: "Lead tracking and pipeline management system.",
-    tech: ["React", "Node.js"],
-  },
-  {
-    title: "Analytics Dashboard",
-    category: "Dashboard",
-    desc: "Real-time business metrics visualization.",
-    tech: ["React", "Charts", "API"],
-  },
-  {
-    title: "WhatsApp Notification Bot",
-    category: "Bot",
-    desc: "Automated customer notifications and reminders.",
-    tech: ["Node.js", "WhatsApp API"],
-  },
-  {
-    title: "Admin CMS Panel",
-    category: "CMS",
-    desc: "Custom CMS for content and operations management.",
-    tech: ["React", "Laravel"],
-  },
-];
+// const projects = [
+//   {
+//     title: "Inventory Management Dashboard",
+//     category: "Web App",
+//     desc: "Custom dashboard for stock tracking, reporting, and analytics.",
+//     tech: ["React", "Laravel", "MySQL"],
+//   },
+//   {
+//     title: "Marketplace Automation Bot",
+//     category: "Automation",
+//     desc: "Automation for product monitoring and order workflow.",
+//     tech: ["Python", "API Integration"],
+//   },
+//   {
+//     title: "Internal CRM System",
+//     category: "Web System",
+//     desc: "Lead tracking and pipeline management system.",
+//     tech: ["React", "Node.js"],
+//   },
+//   {
+//     title: "Analytics Dashboard",
+//     category: "Dashboard",
+//     desc: "Real-time business metrics visualization.",
+//     tech: ["React", "Charts", "API"],
+//   },
+//   {
+//     title: "WhatsApp Notification Bot",
+//     category: "Bot",
+//     desc: "Automated customer notifications and reminders.",
+//     tech: ["Node.js", "WhatsApp API"],
+//   },
+//   {
+//     title: "Admin CMS Panel",
+//     category: "CMS",
+//     desc: "Custom CMS for content and operations management.",
+//     tech: ["React", "Laravel"],
+//   },
+// ];
 
 export default function ProjectsPage() {
+  const { data: projects = [], isLoading } = useFeaturedProjects();
   const navigate = useNavigate();
   usePageTitle("Work");
+
+  if (isLoading) {
+    return (
+      <section className="bg-slate-50 px-6 py-24 md:px-12">
+        <div className="mx-auto max-w-7xl text-center text-slate-500">
+          Loading projects...
+        </div>
+      </section>
+    );
+  }
 
   return (
     <div className="flex flex-col">
@@ -64,7 +76,7 @@ export default function ProjectsPage() {
       <section className="bg-slate-50 py-24 border-t border-slate-100">
         <Container>
           <div className="grid gap-8 md:grid-cols-3">
-            {projects.map((project) => (
+            {projects?.map((project) => (
               <Card key={project.title} className="bg-white border border-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                 <CardContent className="p-6">
                   <Badge className="mb-4 bg-indigo-50 text-indigo-700 border-indigo-100">
@@ -76,16 +88,16 @@ export default function ProjectsPage() {
                   </h3>
 
                   <p className="mb-6 text-sm text-slate-600">
-                    {project.desc}
+                    {project.description}
                   </p>
 
                   <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech) => (
+                    {project.techStack.map((tech) => (
                       <span
-                        key={tech}
+                        key={tech.id}
                         className="rounded-md bg-slate-100 px-2 py-1 text-xs text-slate-600"
                       >
-                        {tech}
+                        {tech.name}
                       </span>
                     ))}
                   </div>
