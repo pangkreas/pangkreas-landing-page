@@ -1,0 +1,317 @@
+{
+  "nav": {
+    "solutions": "Solusi",
+    "creations": "Kreasi",
+    "process": "Cara Kerja",
+    "about": "Tentang",
+    "contact": "Mulai Diskusi",
+    "menu": "Buka menu",
+    "mainLabel": "Navigasi utama",
+    "skip": "Lewati ke konten utama"
+  },
+  "notFound": {
+    "title": "Halaman tidak ditemukan",
+    "description": "Alamat yang kamu buka tidak tersedia.",
+    "home": "Kembali ke beranda"
+  },
+  "dialog": { "close": "Tutup dialog" },
+  "common": {
+    "viewAll": "Lihat semua",
+    "learnMore": "Pelajari lebih lanjut",
+    "all": "Semua",
+    "loading": "Memuat…"
+  },
+  "footer": {
+    "description": "Pangkalan tempat masalah, ide, teknologi, dan kreativitas dikembangkan menjadi solusi nyata.",
+    "privacy": "Kebijakan Privasi",
+    "tagline": "Satu Pangkalan, Banyak Kemungkinan.",
+    "navLabel": "Navigasi bagian bawah"
+  },
+  "seo": {
+    "home": {
+      "title": "Satu Pangkalan, Banyak Kemungkinan",
+      "description": "Pangkreas membantu individu, bisnis, dan komunitas menciptakan solusi melalui teknologi, kreativitas, otomasi, dan riset."
+    },
+    "solutions": {
+      "title": "Ruang Solusi",
+      "description": "Jelajahi cara Pangkreas membangun, mengotomasi, menciptakan, mengeksplorasi, dan memperbaiki solusi."
+    },
+    "creations": {
+      "title": "Kreasi",
+      "description": "Kumpulan sistem, otomasi, prototype, dan eksplorasi yang dikembangkan di Pangkreas."
+    },
+    "process": {
+      "title": "Cara Kerja",
+      "description": "Proses kolaboratif dari memahami kebutuhan hingga mengembangkan solusi."
+    },
+    "about": {
+      "title": "Tentang Pangkreas",
+      "description": "Mengenal Pangkalan Kreasi dan prinsip di balik cara kami bekerja."
+    },
+    "contact": {
+      "title": "Ceritakan Kebutuhanmu",
+      "description": "Mulai diskusi tentang masalah, kebutuhan, atau ide yang ingin dikembangkan."
+    },
+    "privacy": {
+      "title": "Kebijakan Privasi",
+      "description": "Cara Pangkreas menggunakan dan menjaga informasi yang kamu berikan."
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Satu Pangkalan, Banyak Kemungkinan.",
+      "description": "Pangkreas membantu individu, bisnis, dan komunitas menciptakan solusi melalui teknologi, kreativitas, otomasi, dan riset.",
+      "support": "Punya masalah atau ide tetapi belum tahu harus mulai dari mana? Mari kita pelajari dan bangun solusinya bersama.",
+      "primary": "Ceritakan Kebutuhanmu",
+      "secondary": "Jelajahi Solusi"
+    },
+    "needs": {
+      "title": "Apa yang bisa kami bantu?",
+      "business": "Saya membutuhkan sistem untuk bisnis",
+      "automation": "Saya ingin mengotomasi pekerjaan",
+      "product": "Saya mempunyai ide produk",
+      "creative": "Saya membutuhkan solusi kreatif",
+      "experiment": "Saya ingin menguji atau mengembangkan ide",
+      "unsure": "Saya belum tahu solusi yang tepat"
+    },
+    "spaces": { "title": "Lima ruang untuk mengembangkan kemungkinan" },
+    "creations": { "title": "Kreasi pilihan dari pangkalan" },
+    "process": {
+      "title": "Dari cerita menjadi solusi yang dapat digunakan",
+      "step1": "Ceritakan masalah atau ide",
+      "step2": "Kami pelajari kebutuhannya",
+      "step3": "Kami merancang pilihan solusi",
+      "step4": "Solusi dibuat dan diuji",
+      "step5": "Hasil dikembangkan bersama"
+    },
+    "why": {
+      "title": "Mengapa Pangkreas?",
+      "item1": "Solusi disesuaikan dengan kebutuhan",
+      "item2": "Menggabungkan teknologi dan kreativitas",
+      "item3": "Proses transparan dan kolaboratif",
+      "item4": "Bisa dimulai dari prototype kecil",
+      "item5": "Berorientasi pada solusi yang benar-benar dapat digunakan"
+    },
+    "about": "Pangkreas berasal dari Pangkalan Kreasi—sebuah tempat bertemunya masalah, ide, teknologi, dan kreativitas. Kami percaya tidak semua kebutuhan memiliki jawaban siap pakai. Karena itu, kami mempelajari, mencoba, dan membangun solusi yang sesuai.",
+    "final": {
+      "title": "Tidak menemukan layanan yang sesuai?",
+      "description": "Ceritakan kebutuhanmu. Kami akan membantu mempelajari masalahnya dan menemukan kemungkinan solusi yang tepat.",
+      "cta": "Mulai Diskusi"
+    }
+  },
+  "spaces": {
+    "build": {
+      "name": "Bangun",
+      "description": "Membangun website, aplikasi, sistem bisnis, dashboard, dan produk digital."
+    },
+    "automate": {
+      "name": "Otomasi",
+      "description": "Mengotomasi workflow, pekerjaan berulang, integrasi sistem, AI, dan perangkat."
+    },
+    "create": {
+      "name": "Kreasi",
+      "description": "Menciptakan identitas, media digital, konten, serta pengalaman kreatif."
+    },
+    "explore": {
+      "name": "Eksplorasi",
+      "description": "Meneliti, membuat prototype, menguji konsep, dan mengeksplorasi teknologi."
+    },
+    "improve": {
+      "name": "Tingkatkan",
+      "description": "Memperbaiki proses, pengalaman pengguna, performa, serta solusi yang sudah berjalan."
+    }
+  },
+  "solutions": {
+    "title": "Ruang solusi untuk kebutuhan yang berbeda",
+    "description": "Mulai dari kebutuhanmu, bukan dari daftar teknologi. Kita dapat memilih ruang yang paling relevan dan mengembangkannya secara bertahap.",
+    "discuss": "Diskusikan Kebutuhan",
+    "cta": {
+      "build": "Bahas Sistem yang Dibutuhkan",
+      "automate": "Otomatiskan Proses Saya",
+      "create": "Mulai Proyek Kreatif",
+      "explore": "Eksplorasi Ide Bersama",
+      "improve": "Tingkatkan Solusi Saya"
+    }
+  },
+  "capabilities": {
+    "build": {
+      "erp": "Satukan proses operasional dan data penting melalui sistem ERP yang disesuaikan.",
+      "pos": "Kelola transaksi penjualan dengan alur POS yang mudah digunakan.",
+      "inventory": "Pantau stok, perpindahan barang, dan kebutuhan restock dari satu sistem.",
+      "dashboard": "Ubah data menjadi ringkasan yang membantu pengambilan keputusan.",
+      "admin": "Kelola konten, pengguna, serta aktivitas operasional melalui admin panel.",
+      "website": "Hadirkan informasi, layanan, atau produk melalui website yang cepat dan jelas.",
+      "custom": "Bangun sistem bisnis khusus sesuai alur kerja yang benar-benar dijalankan.",
+      "api": "Hubungkan layanan dan data agar dapat bekerja bersama melalui integrasi API."
+    },
+    "automate": {
+      "workflow": "Kurangi langkah manual dengan workflow yang berjalan konsisten.",
+      "ai": "Gunakan AI pada bagian proses yang relevan dan tetap dapat diawasi.",
+      "integration": "Hubungkan sistem yang terpisah agar pertukaran data lebih rapi.",
+      "data": "Otomatiskan pemrosesan dan penyusunan data berulang.",
+      "device": "Eksplorasi otomasi perangkat untuk kebutuhan operasional tertentu.",
+      "repetitive": "Alihkan tugas berulang agar tim dapat fokus pada pekerjaan bernilai lebih tinggi."
+    },
+    "create": {
+      "identity": "Bangun identitas visual yang jelas dan dapat berkembang.",
+      "media": "Rancang media digital yang sesuai dengan konteks dan audiens.",
+      "content": "Susun konten yang mudah dipahami dan konsisten.",
+      "experience": "Ciptakan pengalaman digital yang menarik sekaligus berguna."
+    },
+    "explore": {
+      "research": "Pelajari konteks, pengguna, dan kemungkinan sebelum menentukan arah.",
+      "prototype": "Wujudkan ide dalam prototype kecil yang dapat dievaluasi.",
+      "concept": "Uji konsep untuk menemukan risiko dan peluang sejak awal.",
+      "technology": "Eksplorasi teknologi secara terarah berdasarkan kebutuhan nyata."
+    },
+    "improve": {
+      "process": "Temukan hambatan proses dan rancang alur yang lebih sederhana.",
+      "ux": "Perbaiki pengalaman agar solusi lebih mudah dipahami dan digunakan.",
+      "performance": "Optimalkan kecepatan serta keandalan produk digital.",
+      "existing": "Kembangkan solusi yang sudah berjalan tanpa harus memulai dari awal."
+    }
+  },
+  "creations": {
+    "title": "Kreasi yang lahir dari kebutuhan dan eksplorasi",
+    "description": "Berbagai sistem, otomasi, produk digital, dan eksperimen yang dikembangkan di Pangkreas.",
+    "filterLabel": "Filter kategori kreasi",
+    "problem": "Latar masalah",
+    "solution": "Solusi yang dibuat",
+    "technology": "Teknologi",
+    "empty": "Belum ada kreasi pada kategori ini."
+  },
+  "process": {
+    "title": "Membangun melalui proses yang terbuka",
+    "description": "Setiap kebutuhan berbeda. Proses ini menjadi kerangka kerja yang dapat disesuaikan, bukan tahapan kaku.",
+    "steps": {
+      "1": {
+        "title": "Ceritakan masalah atau ide",
+        "description": "Kita mulai dari konteks, kebutuhan, hambatan, atau kemungkinan yang ingin kamu jelajahi."
+      },
+      "2": {
+        "title": "Kami pelajari kebutuhannya",
+        "description": "Kami menggali tujuan, pengguna, batasan, dan kondisi yang sudah ada."
+      },
+      "3": {
+        "title": "Kami merancang pilihan solusi",
+        "description": "Beberapa pendekatan dipertimbangkan beserta manfaat, risiko, dan ruang lingkupnya."
+      },
+      "4": {
+        "title": "Solusi dibuat dan diuji",
+        "description": "Solusi dibangun bertahap dan diuji pada skenario penggunaan yang relevan."
+      },
+      "5": {
+        "title": "Hasil dikembangkan bersama",
+        "description": "Masukan dan pembelajaran digunakan untuk memperbaiki atau mengembangkan solusi."
+      }
+    }
+  },
+  "about": {
+    "title": "Sebuah pangkalan untuk menciptakan kemungkinan",
+    "description": "Pangkreas menggabungkan teknologi, kreativitas, otomasi, riset, dan kolaborasi untuk membantu individu, bisnis, komunitas, serta organisasi.",
+    "meaningTitle": "Arti Pangkreas",
+    "meaning": "Pangkreas adalah singkatan dari Pangkalan Kreasi: tempat masalah dan ide dipelajari, diuji, lalu diwujudkan menjadi sesuatu yang berguna. Kami tidak menganggap setiap kebutuhan memiliki jawaban instan atau seragam.",
+    "directionTitle": "Arah pengembangan",
+    "direction": "Pangkreas terus mengembangkan ruang untuk membangun produk digital, mengotomasi pekerjaan, menciptakan pengalaman, melakukan riset, serta memperbaiki solusi yang sudah ada secara bertanggung jawab.",
+    "valuesTitle": "Prinsip kerja",
+    "values": {
+      "curious": {
+        "name": "Penuh rasa ingin tahu",
+        "description": "Kami bertanya dan mempelajari konteks sebelum menentukan jawaban."
+      },
+      "practical": {
+        "name": "Praktis",
+        "description": "Ide diterjemahkan menjadi langkah dan hasil yang dapat digunakan."
+      },
+      "collaborative": {
+        "name": "Kolaboratif",
+        "description": "Keputusan dibentuk melalui komunikasi yang terbuka."
+      },
+      "adaptive": {
+        "name": "Adaptif",
+        "description": "Pendekatan menyesuaikan kebutuhan, pembelajaran, dan perubahan."
+      },
+      "responsible": {
+        "name": "Bertanggung jawab",
+        "description": "Dampak, keamanan, privasi, dan batas kemampuan dipertimbangkan sejak awal."
+      }
+    }
+  },
+  "finalCta": {
+    "title": "Belum menemukan solusi yang sesuai?",
+    "description": "Ceritakan kebutuhanmu. Kami akan membantu mempelajari masalahnya dan menemukan kemungkinan solusi yang tepat.",
+    "button": "Ceritakan Kebutuhanmu"
+  },
+  "privacy": {
+    "eyebrow": "KEBIJAKAN PRIVASI",
+    "title": "Privasi yang jelas sejak awal.",
+    "description": "Halaman ini menjelaskan informasi yang dapat diterima Pangkreas ketika kamu menghubungi kami dan bagaimana informasi tersebut diperlakukan.",
+    "sections": {
+      "collected": {
+        "title": "Data yang dikumpulkan",
+        "description": "Jika form diskusi tersedia dan kamu menggunakannya, kami dapat menerima nama, nama bisnis atau organisasi, email, nomor WhatsApp, kategori kebutuhan, isi pesan, target waktu, locale, dan sumber halaman. Kolom opsional tidak perlu diisi."
+      },
+      "purpose": {
+        "title": "Tujuan penggunaan",
+        "description": "Informasi digunakan untuk memahami kebutuhanmu, menanggapi pertanyaan, menilai kemungkinan kolaborasi, dan melanjutkan komunikasi yang kamu minta."
+      },
+      "processing": {
+        "title": "Cara data diproses",
+        "description": "Data diproses sebatas yang diperlukan untuk menangani inquiry. Kami tidak menjual informasi kontak atau menggunakannya untuk tujuan yang tidak berkaitan tanpa persetujuan."
+      },
+      "retention": {
+        "title": "Retensi data",
+        "description": "Data disimpan selama masih diperlukan untuk komunikasi dan keperluan administratif yang wajar, kemudian ditinjau untuk dihapus. Jangka waktu pasti akan ditetapkan sebelum form publik diaktifkan."
+      },
+      "protection": {
+        "title": "Perlindungan data",
+        "description": "Kami menggunakan langkah pengamanan yang wajar dan membatasi akses terhadap informasi inquiry. Tidak ada metode penyimpanan atau transmisi yang dapat dijamin sepenuhnya bebas risiko."
+      },
+      "thirdParty": {
+        "title": "Layanan pihak ketiga",
+        "description": "Jika layanan formulir, penyimpanan, email, atau analytics pihak ketiga digunakan di masa depan, bagian ini akan diperbarui untuk menjelaskan peran layanan tersebut. Saat ini tidak ada vendor yang dinyatakan sebelum dipilih."
+      },
+      "rights": {
+        "title": "Pilihan dan hakmu",
+        "description": "Kamu dapat meminta akses, koreksi, atau penghapusan data yang pernah kamu kirimkan, sejauh data tersebut masih tersedia dan tidak wajib dipertahankan untuk alasan yang sah."
+      },
+      "contact": {
+        "title": "Menghubungi Pangkreas",
+        "description": "Permintaan terkait privasi dapat disampaikan melalui kanal yang ditampilkan pada halaman Mulai Diskusi. Detail kontak hanya ditampilkan jika telah dikonfirmasi dan dikonfigurasi oleh pemilik Pangkreas."
+      }
+    },
+    "note": "Kebijakan ini akan ditinjau kembali sebelum form dan layanan pihak ketiga diaktifkan. Perubahan penting akan dicantumkan pada halaman ini."
+  },
+  "contact": {
+    "eyebrow": "MULAI DISKUSI",
+    "title": "Ceritakan kebutuhan, masalah, atau idemu.",
+    "description": "Kamu tidak perlu menyiapkan brief yang sempurna. Ceritakan konteksnya dan kita dapat mulai mempelajari kemungkinan solusinya bersama.",
+    "alternativeTitle": "Lebih nyaman melalui email?",
+    "alternative": "Kamu juga dapat menceritakan kebutuhanmu langsung melalui email. Kami akan menghubungimu kembali secepatnya.",
+    "formUnavailable": "Form diskusi sedang dipersiapkan. Untuk sementara, kamu dapat menghubungi Pangkreas melalui kanal berikut.",
+    "noChannels": "Belum ada kanal kontak yang tersedia saat ini.",
+    "emailCta": "Kirim email",
+    "whatsappCta": "Hubungi via WhatsApp",
+    "fields": {
+      "name": "Nama",
+      "organization": "Bisnis/organisasi (opsional)",
+      "email": "Email",
+      "whatsapp": "WhatsApp (opsional)",
+      "category": "Saya membutuhkan bantuan untuk",
+      "message": "Ceritakan masalah atau ide",
+      "timeline": "Target waktu (opsional)",
+      "privacy": "Saya menyetujui penggunaan data ini untuk menanggapi kebutuhan saya dan telah membaca <privacyLink>Kebijakan Privasi</privacyLink>."
+    },
+    "unsure": "Belum yakin",
+    "submit": "Kirim Kebutuhan",
+    "sending": "Mengirim...",
+    "success": "Terima kasih. Permintaanmu telah diterima.",
+    "error": "Pesan belum dapat dikirim. Silakan coba kembali.",
+    "validation": {
+      "required": "Bagian ini wajib diisi.",
+      "email": "Masukkan alamat email yang valid.",
+      "message": "Ceritakan kebutuhan minimal 20 karakter.",
+      "privacy": "Persetujuan diperlukan sebelum mengirim."
+    }
+  }
+}

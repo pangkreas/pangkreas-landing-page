@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React from "react";
 
 interface SliderProps {
   min: number;
@@ -13,9 +12,18 @@ interface SliderProps {
 /**
  * Standard UI Slider component.
  */
-export function Slider({ min, max, step = 1, value, onChange, className = '' }: SliderProps) {
+export function Slider({
+  min,
+  max,
+  step = 1,
+  value,
+  onChange,
+  className = "",
+}: SliderProps) {
   return (
-    <div className={`relative flex w-full touch-none select-none items-center ${className}`}>
+    <div
+      className={`relative flex w-full touch-none select-none items-center ${className}`}
+    >
       <input
         type="range"
         min={min}

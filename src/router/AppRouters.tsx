@@ -1,29 +1,53 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import MainLayout from "@/layouts/MainLayout";
-import NotFoundPage from "@/pages/NotFoundPage";
-
-import { HomePage } from "@/features/Home";
-import { ServicesPage } from "@/features/Services";
-import { ProjectPage } from "@/features/Projects";
-import { ProcessPage } from "@/features/process";
-import { ContactPage } from "@/features/Contact";
-
+import { useTranslation } from "react-i18next";
+const Home = lazy(() => import("@/features/Home/HomePage"));
+const Solutions = lazy(() => import("@/features/Services/ServicesPage"));
+const Creations = lazy(() => import("@/features/Projects/ProjectPage"));
+const Process = lazy(() => import("@/features/process/ProcessPage"));
+const About = lazy(() => import("@/features/About/AboutPage"));
+const Contact = lazy(() => import("@/features/Contact/ContactPage"));
+const Privacy = lazy(() => import("@/features/Privacy/PrivacyPage"));
+const NotFound = lazy(() => import("@/pages/NotFoundPage"));
 export default function AppRouter() {
   return (
     <BrowserRouter>
-      <Routes>
-        {/* Layout route */}
-        <Route element={<MainLayout />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/projects" element={<ProjectPage />} />
-          <Route path="/process" element={<ProcessPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Route>
-
-        {/* 404 route (tanpa layout) */}
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <Suspense fallback={<LoadingFallback />}>
+        <Routes>
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/solutions" element={<Solutions />} />
+            <Route path="/creations" element={<Creations />} />
+            <Route path="/process" element={<Process />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route
+              path="/services"
+              element={<Navigate replace to="/solutions" />}
+            />
+            <Route
+              path="/projects"
+              element={<Navigate replace to="/creations" />}
+            />
+            <Route
+              path="/work"
+              element={<Navigate replace to="/creations" />}
+            />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </BrowserRouter>
+  );
+}
+
+function LoadingFallback() {
+  const { t } = useTranslation();
+  return (
+    <p role="status" className="p-8 text-center text-slate-600">
+      {t("common.loading")}
+    </p>
   );
 }

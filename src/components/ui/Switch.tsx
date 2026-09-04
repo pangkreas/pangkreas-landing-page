@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React from "react";
 
 interface SwitchProps {
   checked: boolean;
@@ -8,7 +7,12 @@ interface SwitchProps {
   className?: string;
 }
 
-export function Switch({ checked, onCheckedChange, disabled = false, className = '' }: SwitchProps) {
+export function Switch({
+  checked,
+  onCheckedChange,
+  disabled = false,
+  className = "",
+}: SwitchProps) {
   return (
     <button
       type="button"
@@ -17,12 +21,12 @@ export function Switch({ checked, onCheckedChange, disabled = false, className =
       disabled={disabled}
       onClick={() => onCheckedChange(!checked)}
       className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${
-        checked ? 'bg-indigo-600' : 'bg-gray-200'
+        checked ? "bg-indigo-600" : "bg-gray-200"
       } ${className}`}
     >
       <span
         className={`pointer-events-none block h-5 w-5 rounded-full bg-white shadow-lg ring-0 transition-transform ${
-          checked ? 'translate-x-5' : 'translate-x-1'
+          checked ? "translate-x-5" : "translate-x-1"
         }`}
       />
     </button>

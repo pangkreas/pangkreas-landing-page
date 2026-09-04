@@ -1,83 +1,95 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
-
+import { track } from "@/services/analytics";
+const links = ["solutions", "creations", "process", "about"];
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-
-  const navLinks = (
-    <>
-      <NavLink 
-        to="/services" 
-        onClick={() => setOpen(false)}
-        className={({ isActive }) =>
-          `transition-colors ${
-            isActive ? "text-indigo-600 font-semibold" : "hover:text-indigo-600"
-          }`
-        }
-      >Services</NavLink>
-      <NavLink 
-        to="/projects" 
-        onClick={() => setOpen(false)}
-        className={({ isActive }) =>
-          `transition-colors ${
-            isActive ? "text-indigo-600 font-semibold" : "hover:text-indigo-600"
-          }`
-        }
-      >Work</NavLink>
-      <NavLink 
-        to="/process" 
-        onClick={() => setOpen(false)}
-        className={({ isActive }) =>
-          `transition-colors ${
-            isActive ? "text-indigo-600 font-semibold" : "hover:text-indigo-600"
-          }`
-        }
-      >Process</NavLink>
-      <NavLink
-        to="/contact"
-        onClick={() => setOpen(false)}
-        className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700"
-      >
-        Start a Project
-      </NavLink>
-    </>
-  );
-
-
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  const firstLinkRef = useRef<HTMLAnchorElement>(null);
+  const { t, i18n } = useTranslation();
+  useEffect(() => {
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    firstLinkRef.current?.focus();
+    const close = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+        toggleRef.current?.focus();
+      }
+    };
+    window.addEventListener("keydown", close);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", close);
+    };
+  }, [open]);
+  const change = (lang: "id" | "en") => {
+    void i18n.changeLanguage(lang);
+    localStorage.setItem("language", lang);
+    track("language_changed", { locale: lang });
+  };
   return (
     <>
-      <nav className="hidden items-center gap-8 md:flex text-sm font-medium text-slate-600">
-        {navLinks}
-      </nav>
       <button
+        ref={toggleRef}
+        type="button"
+        aria-expanded={open}
+        aria-controls="main-menu"
         onClick={() => setOpen(!open)}
-        className="relative h-6 w-6 md:hidden"
-        aria-label="Toggle menu"
+        className="flex min-h-11 min-w-11 items-center justify-center rounded-xl border border-slate-200 p-2 md:hidden"
       >
-        <span
-          className={`absolute h-0.5 w-6 bg-slate-800 transition-all ${
-            open ? "rotate-45 top-3" : "top-1"
-          }`}
-        />
-        <span
-          className={`absolute h-0.5 w-6 bg-slate-800 transition-all ${
-            open ? "opacity-0" : "top-3"
-          }`}
-        />
-        <span
-          className={`absolute h-0.5 w-6 bg-slate-800 transition-all ${
-            open ? "-rotate-45 top-3" : "top-5"
-          }`}
-        />
+        <span className="sr-only">{t("nav.menu")}</span>
+        <span aria-hidden="true" className="text-xl">
+          {open ? "×" : "☰"}
+        </span>
       </button>
-      <div className={`absolute left-0 top-16 w-full border-b bg-white md:hidden transition-all duration-300 ${
-          open ? "opacity-100 translate-y-0" : "pointer-events-none opacity-0 -translate-y-2"
-        }`}>
-        <div className="flex flex-col gap-4 px-6 py-6 text-sm font-medium text-slate-700">
-          {navLinks}
+      <nav
+        id="main-menu"
+        aria-label={t("nav.mainLabel")}
+        className={`${open ? "flex" : "hidden"} fixed inset-x-0 top-16 max-h-[calc(100dvh-4rem)] flex-col gap-2 overflow-y-auto border-b bg-white p-5 shadow-xl md:static md:flex md:w-auto md:flex-row md:items-center md:gap-1 md:overflow-visible md:border-0 md:bg-transparent md:p-0 md:shadow-none`}
+      >
+        {links.map((key) => (
+          <NavLink
+            ref={key === "solutions" ? firstLinkRef : undefined}
+            onClick={() => setOpen(false)}
+            key={key}
+            to={`/${key}`}
+            className={({ isActive }) =>
+              `flex min-h-11 items-center rounded-lg px-3 py-2 text-base font-semibold md:text-sm ${isActive ? "bg-sky-50 text-sky-700 md:bg-transparent md:text-sky-600" : "text-slate-700 hover:bg-slate-50 hover:text-sky-600"}`
+            }
+          >
+            {t(`nav.${key}`)}
+          </NavLink>
+        ))}
+        <div className="mt-2 flex min-h-11 items-center gap-2 border-t border-slate-100 pt-3 text-sm md:mt-0 md:border-0 md:pt-0">
+          <button
+            type="button"
+            onClick={() => change("id")}
+            aria-pressed={i18n.language.startsWith("id")}
+            className="flex min-h-11 min-w-11 items-center justify-center rounded-lg px-2 py-1 aria-pressed:bg-sky-100 aria-pressed:text-sky-700"
+          >
+            ID
+          </button>
+          <span aria-hidden="true">/</span>
+          <button
+            type="button"
+            onClick={() => change("en")}
+            aria-pressed={i18n.language.startsWith("en")}
+            className="flex min-h-11 min-w-11 items-center justify-center rounded-lg px-2 py-1 aria-pressed:bg-sky-100 aria-pressed:text-sky-700"
+          >
+            EN
+          </button>
         </div>
-      </div>
+        <NavLink
+          onClick={() => setOpen(false)}
+          to="/contact"
+          className="mt-2 flex min-h-11 items-center justify-center rounded-xl bg-sky-500 px-4 py-2 text-center text-base font-bold text-white hover:bg-sky-600 md:mt-0 md:text-sm"
+        >
+          {t("nav.contact")}
+        </NavLink>
+      </nav>
     </>
   );
 }

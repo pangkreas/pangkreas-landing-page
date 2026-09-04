@@ -1,0 +1,317 @@
+{
+  "nav": {
+    "solutions": "Solutions",
+    "creations": "Creations",
+    "process": "How We Work",
+    "about": "About",
+    "contact": "Start a Conversation",
+    "menu": "Open menu",
+    "mainLabel": "Main navigation",
+    "skip": "Skip to main content"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The address you opened is not available.",
+    "home": "Return home"
+  },
+  "dialog": { "close": "Close dialog" },
+  "common": {
+    "viewAll": "View all",
+    "learnMore": "Learn more",
+    "all": "All",
+    "loading": "Loading…"
+  },
+  "footer": {
+    "description": "A hub where problems, ideas, technology, and creativity are developed into practical solutions.",
+    "privacy": "Privacy Policy",
+    "tagline": "One Hub, Many Possibilities.",
+    "navLabel": "Footer navigation"
+  },
+  "seo": {
+    "home": {
+      "title": "One Hub, Many Possibilities",
+      "description": "Pangkreas helps individuals, businesses, and communities create practical solutions through technology, creativity, automation, and research."
+    },
+    "solutions": {
+      "title": "Solution Spaces",
+      "description": "Explore how Pangkreas builds, automates, creates, explores, and improves practical solutions."
+    },
+    "creations": {
+      "title": "Creations",
+      "description": "A collection of systems, automation, prototypes, and explorations developed at Pangkreas."
+    },
+    "process": {
+      "title": "How We Work",
+      "description": "A collaborative process from understanding needs to developing a solution."
+    },
+    "about": {
+      "title": "About Pangkreas",
+      "description": "Discover Pangkalan Kreasi and the principles behind our work."
+    },
+    "contact": {
+      "title": "Tell Us What You Need",
+      "description": "Start a conversation about a problem, need, or idea you want to develop."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "How Pangkreas uses and protects the information you provide."
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "One Hub, Many Possibilities.",
+      "description": "Pangkreas helps individuals, businesses, and communities create practical solutions through technology, creativity, automation, and research.",
+      "support": "Have a problem or an idea but do not know where to begin? Let us explore it and build the right solution together.",
+      "primary": "Tell Us What You Need",
+      "secondary": "Explore Solutions"
+    },
+    "needs": {
+      "title": "What can we help with?",
+      "business": "I need a system for my business",
+      "automation": "I want to automate work",
+      "product": "I have a product idea",
+      "creative": "I need a creative solution",
+      "experiment": "I want to test or develop an idea",
+      "unsure": "I am not sure what solution I need"
+    },
+    "spaces": { "title": "Five spaces for developing possibilities" },
+    "creations": { "title": "Selected creations from the hub" },
+    "process": {
+      "title": "From a story to a solution people can use",
+      "step1": "Share the problem or idea",
+      "step2": "We study the need",
+      "step3": "We design possible solutions",
+      "step4": "The solution is built and tested",
+      "step5": "We develop the result together"
+    },
+    "why": {
+      "title": "Why Pangkreas?",
+      "item1": "Solutions shaped around actual needs",
+      "item2": "Technology and creativity working together",
+      "item3": "A transparent, collaborative process",
+      "item4": "The option to start with a small prototype",
+      "item5": "A focus on solutions people can genuinely use"
+    },
+    "about": "Pangkreas comes from Pangkalan Kreasi—a place where problems, ideas, technology, and creativity meet. We believe not every need has a ready-made answer. That is why we study, experiment, and build an appropriate solution.",
+    "final": {
+      "title": "Cannot find the right service?",
+      "description": "Tell us what you need. We will help study the problem and identify a suitable direction.",
+      "cta": "Start a Conversation"
+    }
+  },
+  "spaces": {
+    "build": {
+      "name": "Build",
+      "description": "Build websites, applications, business systems, dashboards, and digital products."
+    },
+    "automate": {
+      "name": "Automate",
+      "description": "Automate workflows, repetitive tasks, system integrations, AI, and devices."
+    },
+    "create": {
+      "name": "Create",
+      "description": "Create identities, digital media, content, and creative experiences."
+    },
+    "explore": {
+      "name": "Explore",
+      "description": "Research, prototype, test concepts, and explore technology."
+    },
+    "improve": {
+      "name": "Improve",
+      "description": "Improve processes, user experience, performance, and existing solutions."
+    }
+  },
+  "solutions": {
+    "title": "Solution spaces for different needs",
+    "description": "Start with the need, not a technology list. We can choose the most relevant space and develop it in practical stages.",
+    "discuss": "Discuss Your Needs",
+    "cta": {
+      "build": "Discuss the System You Need",
+      "automate": "Automate My Process",
+      "create": "Start a Creative Project",
+      "explore": "Explore an Idea Together",
+      "improve": "Improve My Existing Solution"
+    }
+  },
+  "capabilities": {
+    "build": {
+      "erp": "Bring operational processes and important data together in a tailored ERP.",
+      "pos": "Manage sales transactions with a POS flow that is easy to use.",
+      "inventory": "Track stock, product movement, and restocking needs from one system.",
+      "dashboard": "Turn data into a clear view that supports decision-making.",
+      "admin": "Manage content, users, and operations through an admin panel.",
+      "website": "Present information, services, or products through a fast, clear website.",
+      "custom": "Build a custom business system around the workflow people actually use.",
+      "api": "Connect services and data so they work together through APIs."
+    },
+    "automate": {
+      "workflow": "Reduce manual steps with workflows that run consistently.",
+      "ai": "Apply AI where it is relevant and can remain supervised.",
+      "integration": "Connect separate systems for cleaner data exchange.",
+      "data": "Automate repetitive data processing and reporting.",
+      "device": "Explore device automation for specific operational needs.",
+      "repetitive": "Move repetitive work out of the way so teams can focus on higher-value tasks."
+    },
+    "create": {
+      "identity": "Develop a clear visual identity that can grow.",
+      "media": "Design digital media for its context and audience.",
+      "content": "Shape content that is clear and consistent.",
+      "experience": "Create digital experiences that are engaging and useful."
+    },
+    "explore": {
+      "research": "Study context, users, and possibilities before choosing a direction.",
+      "prototype": "Turn an idea into a small prototype that can be evaluated.",
+      "concept": "Test concepts to identify risks and opportunities early.",
+      "technology": "Explore technology with a clear, real-world purpose."
+    },
+    "improve": {
+      "process": "Find process friction and design a simpler flow.",
+      "ux": "Improve an experience so it is easier to understand and use.",
+      "performance": "Improve the speed and reliability of a digital product.",
+      "existing": "Develop an existing solution without unnecessarily starting over."
+    }
+  },
+  "creations": {
+    "title": "Creations born from needs and exploration",
+    "description": "Systems, automations, digital products, and experiments developed at Pangkreas.",
+    "filterLabel": "Filter creation categories",
+    "problem": "Background",
+    "solution": "Created solution",
+    "technology": "Technology",
+    "empty": "There are no creations in this category yet."
+  },
+  "process": {
+    "title": "Building through an open process",
+    "description": "Every need is different. This is an adaptable framework, not a rigid sequence.",
+    "steps": {
+      "1": {
+        "title": "Share the problem or idea",
+        "description": "We begin with context, needs, friction, or a possibility you want to explore."
+      },
+      "2": {
+        "title": "We study the need",
+        "description": "We explore goals, users, constraints, and what already exists."
+      },
+      "3": {
+        "title": "We design possible solutions",
+        "description": "We consider approaches along with their value, risks, and scope."
+      },
+      "4": {
+        "title": "The solution is built and tested",
+        "description": "We build in stages and test against relevant use cases."
+      },
+      "5": {
+        "title": "We develop the result together",
+        "description": "Feedback and learning guide the next improvement or direction."
+      }
+    }
+  },
+  "about": {
+    "title": "A hub for creating possibilities",
+    "description": "Pangkreas combines technology, creativity, automation, research, and collaboration to support individuals, businesses, communities, and organizations.",
+    "meaningTitle": "What Pangkreas means",
+    "meaning": "Pangkreas is short for Pangkalan Kreasi—Creation Hub: a place where problems and ideas are studied, tested, and shaped into something useful. We do not assume every need has an instant or identical answer.",
+    "directionTitle": "Where we are heading",
+    "direction": "Pangkreas continues to develop spaces for digital products, work automation, creative experiences, research, and the responsible improvement of existing solutions.",
+    "valuesTitle": "Working principles",
+    "values": {
+      "curious": {
+        "name": "Curious",
+        "description": "We ask questions and understand context before choosing an answer."
+      },
+      "practical": {
+        "name": "Practical",
+        "description": "Ideas are translated into usable steps and outcomes."
+      },
+      "collaborative": {
+        "name": "Collaborative",
+        "description": "Decisions are shaped through open communication."
+      },
+      "adaptive": {
+        "name": "Adaptive",
+        "description": "The approach responds to needs, learning, and change."
+      },
+      "responsible": {
+        "name": "Responsible",
+        "description": "Impact, security, privacy, and limitations are considered from the start."
+      }
+    }
+  },
+  "finalCta": {
+    "title": "Have not found the right solution?",
+    "description": "Tell us what you need. We’ll help explore the problem and identify a practical direction.",
+    "button": "Tell Us What You Need"
+  },
+  "privacy": {
+    "eyebrow": "PRIVACY POLICY",
+    "title": "Clear about privacy from the start.",
+    "description": "This page explains the information Pangkreas may receive when you contact us and how that information is handled.",
+    "sections": {
+      "collected": {
+        "title": "Data we collect",
+        "description": "If the conversation form is available and you use it, we may receive your name, business or organization, email, WhatsApp number, need category, message, target timeline, locale, and page source. Optional fields do not need to be completed."
+      },
+      "purpose": {
+        "title": "How we use it",
+        "description": "The information is used to understand your needs, respond to questions, assess a possible collaboration, and continue the communication you requested."
+      },
+      "processing": {
+        "title": "How data is processed",
+        "description": "Data is processed only as needed to handle an inquiry. We do not sell contact information or use it for unrelated purposes without consent."
+      },
+      "retention": {
+        "title": "Data retention",
+        "description": "Data is kept while it is reasonably needed for communication and administration, then reviewed for deletion. A specific retention period will be set before the public form is enabled."
+      },
+      "protection": {
+        "title": "Protecting information",
+        "description": "We use reasonable safeguards and limit access to inquiry information. No storage or transmission method can be guaranteed to be entirely risk-free."
+      },
+      "thirdParty": {
+        "title": "Third-party services",
+        "description": "If third-party form, storage, email, or analytics services are used in the future, this section will be updated to explain their role. No vendor is named before one has been selected."
+      },
+      "rights": {
+        "title": "Your choices and rights",
+        "description": "You may request access to, correction of, or deletion of data you previously submitted, where it remains available and is not required to be kept for a legitimate reason."
+      },
+      "contact": {
+        "title": "Contacting Pangkreas",
+        "description": "Privacy requests can be sent through a channel shown on the Start a Conversation page. Contact details appear only after they have been confirmed and configured by the owner of Pangkreas."
+      }
+    },
+    "note": "This policy will be reviewed before the form and third-party services are enabled. Material changes will be reflected on this page."
+  },
+  "contact": {
+    "eyebrow": "START A CONVERSATION",
+    "title": "Tell us about your need, problem, or idea.",
+    "description": "You do not need a perfect brief. Share the context and we can begin exploring the possibilities together.",
+    "alternativeTitle": "Prefer email?",
+    "alternative": "You can also tell us about your needs directly by email. We’ll get back to you as soon as possible.",
+    "formUnavailable": "The conversation form is being prepared. In the meantime, you can reach Pangkreas through the available contact channel.",
+    "noChannels": "No contact channel is currently available.",
+    "emailCta": "Send an email",
+    "whatsappCta": "Contact us on WhatsApp",
+    "fields": {
+      "name": "Name",
+      "organization": "Business/organization (optional)",
+      "email": "Email",
+      "whatsapp": "WhatsApp (optional)",
+      "category": "I need help with",
+      "message": "Describe the problem or idea",
+      "timeline": "Target timeline (optional)",
+      "privacy": "I agree that this data may be used to respond to my inquiry and confirm that I have read the <privacyLink>Privacy Policy</privacyLink>."
+    },
+    "unsure": "Not sure yet",
+    "submit": "Send Inquiry",
+    "sending": "Sending...",
+    "success": "Thank you. Your inquiry has been received.",
+    "error": "Your message could not be sent. Please try again.",
+    "validation": {
+      "required": "This field is required.",
+      "email": "Enter a valid email address.",
+      "message": "Please provide at least 20 characters.",
+      "privacy": "Consent is required before sending."
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from "react";
 
 interface DropdownItem {
   label: string;
@@ -17,22 +17,32 @@ interface DropdownMenuProps {
  * DropdownMenu component.
  * Displays a context menu when the trigger element is clicked.
  */
-export function DropdownMenu({ trigger, items, className = '' }: DropdownMenuProps) {
+export function DropdownMenu({
+  trigger,
+  items,
+  className = "",
+}: DropdownMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
-    <div className={`relative inline-block text-left ${className}`} ref={dropdownRef}>
+    <div
+      className={`relative inline-block text-left ${className}`}
+      ref={dropdownRef}
+    >
       <div onClick={() => setIsOpen(!isOpen)} className="cursor-pointer">
         {trigger}
       </div>
@@ -48,7 +58,9 @@ export function DropdownMenu({ trigger, items, className = '' }: DropdownMenuPro
                   setIsOpen(false);
                 }}
                 className={`flex w-full items-center px-4 py-2 text-sm transition-colors ${
-                  item.destructive ? 'text-red-600 hover:bg-red-50' : 'text-gray-700 hover:bg-gray-100'
+                  item.destructive
+                    ? "text-red-600 hover:bg-red-50"
+                    : "text-gray-700 hover:bg-gray-100"
                 }`}
               >
                 {item.icon && <span className="mr-3 h-5 w-5">{item.icon}</span>}

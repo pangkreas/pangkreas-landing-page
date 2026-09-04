@@ -1,7 +1,6 @@
+import React from "react";
 
-import React from 'react';
-
-export type ToastType = 'info' | 'success' | 'error';
+export type ToastType = "info" | "success" | "error";
 
 export interface ToastMessage {
   id: string;
@@ -25,9 +24,11 @@ export function Toaster({ toasts, onRemove }: ToasterProps) {
         <div
           key={toast.id}
           className={`pointer-events-auto relative mb-2 flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all animate-in slide-in-from-right-full ${
-            toast.type === 'success' ? 'bg-white border-green-200 text-green-800' :
-            toast.type === 'error' ? 'bg-white border-red-200 text-red-800' :
-            'bg-white border-gray-200'
+            toast.type === "success"
+              ? "bg-white border-green-200 text-green-800"
+              : toast.type === "error"
+                ? "bg-white border-red-200 text-red-800"
+                : "bg-white border-gray-200"
           }`}
         >
           <div className="grid gap-1">
@@ -40,8 +41,18 @@ export function Toaster({ toasts, onRemove }: ToasterProps) {
             onClick={() => onRemove(toast.id)}
             className="absolute right-2 top-2 rounded-md p-1 text-gray-500 opacity-50 transition-opacity hover:opacity-100"
           >
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <svg
+              className="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>

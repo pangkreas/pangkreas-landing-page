@@ -1,116 +1,119 @@
-import { Card, CardContent, Badge, Button } from "@/components/ui";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import Container from "@/components/layout/Container";
-import usePageTitle from "@/hooks/usePageTitle";
-
-const projects = [
-  {
-    title: "Inventory Management Dashboard",
-    category: "Web App",
-    desc: "Custom dashboard for stock tracking, reporting, and analytics.",
-    tech: ["React", "Laravel", "MySQL"],
-  },
-  {
-    title: "Marketplace Automation Bot",
-    category: "Automation",
-    desc: "Automation for product monitoring and order workflow.",
-    tech: ["Python", "API Integration"],
-  },
-  {
-    title: "Internal CRM System",
-    category: "Web System",
-    desc: "Lead tracking and pipeline management system.",
-    tech: ["React", "Node.js"],
-  },
-  {
-    title: "Analytics Dashboard",
-    category: "Dashboard",
-    desc: "Real-time business metrics visualization.",
-    tech: ["React", "Charts", "API"],
-  },
-  {
-    title: "WhatsApp Notification Bot",
-    category: "Bot",
-    desc: "Automated customer notifications and reminders.",
-    tech: ["Node.js", "WhatsApp API"],
-  },
-  {
-    title: "Admin CMS Panel",
-    category: "CMS",
-    desc: "Custom CMS for content and operations management.",
-    tech: ["React", "Laravel"],
-  },
-];
-
-export default function ProjectsPage() {
-  const navigate = useNavigate();
-  usePageTitle("Work");
-
+import FinalCta from "@/components/common/FinalCta";
+import PageIntro from "@/components/common/PageIntro";
+import Seo from "@/components/common/Seo";
+import { CreationVisual } from "@/components/visual";
+import {
+  creations,
+  creationsPageDescription,
+  creationTypeLabels,
+  getLocalizedText,
+  spaces,
+  type SpaceKey,
+} from "@/data/content";
+export default function ProjectPage() {
+  const { t, i18n } = useTranslation();
+  const [filter, setFilter] = useState<"all" | SpaceKey>("all");
+  const language = i18n.resolvedLanguage ?? i18n.language;
+  const visible =
+    filter === "all"
+      ? creations
+      : creations.filter((x) => x.category === filter);
   return (
-    <div className="flex flex-col">
-      {/* HERO */}
-      <section className="py-24 pb-16">
-        <Container className="mx-auto max-w-3xl">
-          <h1 className="mb-6 text-5xl font-bold text-slate-900">
-            Selected Work
-          </h1>
-          <p className="text-lg text-slate-600">
-            A selection of apps, automation, and internal tools we've helped bring to life.
-          </p>
-        </Container>
-      </section>
-
-      {/* PROJECT GRID */}
-      <section className="bg-slate-50 py-24 border-t border-slate-100">
-        <Container>
-          <div className="grid gap-8 md:grid-cols-3">
-            {projects.map((project) => (
-              <Card key={project.title} className="bg-white border border-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                <CardContent className="p-6">
-                  <Badge className="mb-4 bg-indigo-50 text-indigo-700 border-indigo-100">
-                    {project.category}
-                  </Badge>
-
-                  <h3 className="mb-3 text-xl font-bold text-slate-900">
-                    {project.title}
-                  </h3>
-
-                  <p className="mb-6 text-sm text-slate-600">
-                    {project.desc}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="rounded-md bg-slate-100 px-2 py-1 text-xs text-slate-600"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+    <>
+      <Seo
+        titleKey="seo.creations.title"
+        descriptionKey="seo.creations.description"
+        path="/creations"
+      />
+      <PageIntro
+        eyebrow={t("nav.creations")}
+        title={t("creations.title")}
+        description={getLocalizedText(creationsPageDescription, language)}
+      />
+      <Container className="py-12 sm:py-16">
+        <div
+          role="group"
+          aria-label={t("creations.filterLabel")}
+          className="flex flex-wrap gap-2"
+        >
+          {["all", ...spaces].map((key) => (
+            <button
+              type="button"
+              aria-pressed={filter === key}
+              key={key}
+              onClick={() => setFilter(key as "all" | SpaceKey)}
+              className="inline-flex min-h-11 items-center rounded-full border border-slate-300 px-4 py-2 text-base font-bold hover:border-sky-400 aria-pressed:border-sky-500 aria-pressed:bg-sky-500 aria-pressed:text-white"
+            >
+              {key === "all" ? t("common.all") : t(`spaces.${key}.name`)}
+            </button>
+          ))}
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {visible.map((item) => (
+            <article
+              key={item.id}
+              className="overflow-hidden rounded-2xl border border-slate-200 bg-white transition-transform hover:-translate-y-0.5 hover:shadow-xl hover:shadow-sky-100/70"
+            >
+              <CreationVisual
+                category={item.category}
+                variant={item.visualVariant}
+              />
+              <div className="p-5 sm:p-7">
+                <div className="flex items-center justify-between gap-4">
+                  <span className="text-sm font-bold uppercase text-sky-700">
+                    {t(`spaces.${item.category}.name`)}
+                  </span>
+                  <span className="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">
+                    {getLocalizedText(creationTypeLabels[item.type], language)}
+                  </span>
+                </div>
+                <h2 className="mt-3 text-2xl font-black">
+                  {getLocalizedText(item.title, language)}
+                </h2>
+                <dl className="mt-5 space-y-4 text-base leading-7">
+                  <div>
+                    <dt className="font-bold">{t("creations.problem")}</dt>
+                    <dd className="mt-1 text-slate-600">
+                      {getLocalizedText(item.background, language)}
+                    </dd>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-gradient-to-r from-indigo-600 to-indigo-500 py-24 text-center text-white">
-        <Container>
-          <h2 className="mb-6 text-4xl font-bold">
-            Want to build something similar?
-          </h2>
-
-          <Button
-            onClick={() => navigate("/contact")}
-            className="!bg-white !text-indigo-600 hover:!bg-indigo-50 px-8 py-4 text-lg font-semibold"
+                  <div>
+                    <dt className="font-bold">{t("creations.solution")}</dt>
+                    <dd className="mt-1 text-slate-600">
+                      {getLocalizedText(item.solution, language)}
+                    </dd>
+                  </div>
+                </dl>
+                <ul
+                  aria-label={t("creations.technology")}
+                  className="mt-5 flex flex-wrap gap-2"
+                >
+                  {item.technologies.map((x) => (
+                    <li
+                      className="rounded-md bg-slate-100 px-2.5 py-1.5 text-sm text-slate-700"
+                      key={x.en}
+                    >
+                      {getLocalizedText(x, language)}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))}
+        </div>
+        {visible.length === 0 && (
+          <p
+            role="status"
+            className="mt-10 rounded-2xl bg-slate-50 p-8 text-center"
           >
-            Start a Project
-          </Button>
-        </Container>
-      </section>
-    </div>
+            {t("creations.empty")}
+          </p>
+        )}
+      </Container>
+      <FinalCta />
+    </>
   );
 }

@@ -1,9 +1,9 @@
 {
-  "short_name": "PangkalanKreasi",
-  "name": "Pangkalan Kreasi Landing Page",
+  "short_name": "Pangkreas",
+  "name": "Pangkreas — Pangkalan Kreasi",
   "icons": [],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#4f46e5",
+  "theme_color": "#082f49",
   "background_color": "#ffffff"
 }
