@@ -2,7 +2,8 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import MainLayout from "@/layouts/MainLayout";
 import { useTranslation } from "react-i18next";
-const Home = lazy(() => import("@/features/Home/HomePage"));
+import Home from "@/features/Home/HomePage";
+
 const Solutions = lazy(() => import("@/features/Services/ServicesPage"));
 const Creations = lazy(() => import("@/features/Projects/ProjectPage"));
 const Process = lazy(() => import("@/features/process/ProcessPage"));

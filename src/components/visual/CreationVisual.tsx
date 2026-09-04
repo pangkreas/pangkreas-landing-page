@@ -174,6 +174,8 @@ function FlowVisual() {
       />
       <circle
         className="creation-dot creation-dot--strong creation-dot--traveler"
+        cx="77"
+        cy="153"
         r="7"
       />
       <path className="creation-mark" d="M214 145L222 153L238 135" />

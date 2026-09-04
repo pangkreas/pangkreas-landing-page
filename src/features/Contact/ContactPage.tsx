@@ -325,7 +325,7 @@ function ContactForm({
           <button
             type="submit"
             disabled={state === "loading"}
-            className="min-h-11 w-full rounded-xl bg-sky-500 px-6 py-3 font-bold text-white disabled:cursor-wait disabled:opacity-60"
+            className="min-h-11 w-full rounded-xl bg-sky-700 px-6 py-3 font-bold text-white hover:bg-sky-800 disabled:cursor-wait disabled:opacity-60"
           >
             {state === "loading" ? t("contact.sending") : t("contact.submit")}
           </button>

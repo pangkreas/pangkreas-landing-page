@@ -51,7 +51,7 @@ export default function Footer() {
         </nav>
         <div className="text-base leading-7 text-slate-400 md:text-right">
           <p>{t("footer.tagline")}</p>
-          <p className="mt-3 text-sm text-slate-500">
+          <p className="mt-3 text-sm text-slate-400">
             © {new Date().getFullYear()} Pangkreas · Pangkalan Kreasi
           </p>
         </div>

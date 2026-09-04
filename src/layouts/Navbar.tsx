@@ -57,7 +57,7 @@ export default function Navbar() {
             key={key}
             to={`/${key}`}
             className={({ isActive }) =>
-              `flex min-h-11 items-center rounded-lg px-3 py-2 text-base font-semibold md:text-sm ${isActive ? "bg-sky-50 text-sky-700 md:bg-transparent md:text-sky-600" : "text-slate-700 hover:bg-slate-50 hover:text-sky-600"}`
+              `flex min-h-11 items-center rounded-lg px-3 py-2 text-base font-semibold md:text-sm ${isActive ? "bg-sky-50 text-sky-700 md:bg-transparent md:text-sky-700" : "text-slate-700 hover:bg-slate-50 hover:text-sky-700"}`
             }
           >
             {t(`nav.${key}`)}
@@ -85,7 +85,7 @@ export default function Navbar() {
         <NavLink
           onClick={() => setOpen(false)}
           to="/contact"
-          className="mt-2 flex min-h-11 items-center justify-center rounded-xl bg-sky-500 px-4 py-2 text-center text-base font-bold text-white hover:bg-sky-600 md:mt-0 md:text-sm"
+          className="mt-2 flex min-h-11 items-center justify-center rounded-xl bg-sky-700 px-4 py-2 text-center text-base font-bold text-white hover:bg-sky-800 md:mt-0 md:text-sm"
         >
           {t("nav.contact")}
         </NavLink>

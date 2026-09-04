@@ -11,7 +11,7 @@ export default function MainLayout() {
       <StructuredData />
       <a
         href="#main-content"
-        className="fixed left-3 top-3 z-[100] -translate-y-20 rounded-lg bg-sky-600 px-4 py-2 text-white focus:translate-y-0"
+        className="fixed left-3 top-3 z-[100] -translate-y-20 rounded-lg bg-sky-700 px-4 py-2 text-white focus:translate-y-0"
       >
         {t("nav.skip")}
       </a>

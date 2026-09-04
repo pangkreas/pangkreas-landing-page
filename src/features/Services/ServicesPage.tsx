@@ -48,7 +48,7 @@ export default function ServicesPage() {
                 className={`grid items-stretch lg:grid-cols-2 ${i % 2 ? "lg:[&>*:first-child]:order-2" : ""}`}
               >
                 <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-12">
-                  <span className="text-sm font-black text-sky-500">
+                  <span className="text-sm font-black text-sky-700">
                     0{i + 1}
                   </span>
                   <h2 className="mt-3 text-3xl font-black">
@@ -59,7 +59,7 @@ export default function ServicesPage() {
                   </p>
                   <Link
                     to={`/contact?category=${space}`}
-                    className="mt-7 inline-flex min-h-11 w-fit items-center rounded-xl bg-slate-950 px-5 py-3 font-bold text-white transition-transform hover:-translate-y-0.5 hover:bg-sky-600"
+                    className="mt-7 inline-flex min-h-11 w-fit items-center rounded-xl bg-slate-950 px-5 py-3 font-bold text-white transition-transform hover:-translate-y-0.5 hover:bg-sky-800"
                   >
                     {t(`solutions.cta.${space}`)}
                   </Link>

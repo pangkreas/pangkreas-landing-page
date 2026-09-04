@@ -53,7 +53,7 @@ export default function HomePage() {
               <Link
                 onClick={() => track("hero_primary_cta_clicked")}
                 to="/contact"
-                className="inline-flex min-h-11 items-center justify-center rounded-xl bg-sky-500 px-6 py-3 text-center font-bold text-white shadow-lg shadow-sky-200 hover:-translate-y-0.5 hover:bg-sky-600"
+                className="inline-flex min-h-11 items-center justify-center rounded-xl bg-sky-700 px-6 py-3 text-center font-bold text-white shadow-lg shadow-sky-200 hover:-translate-y-0.5 hover:bg-sky-800"
               >
                 {t("home.hero.primary")}
               </Link>
@@ -85,7 +85,7 @@ export default function HomePage() {
                 <span className="max-w-xs text-lg font-bold">
                   {t(`home.needs.${key}`)}
                 </span>
-                <span aria-hidden="true" className="text-sky-500">
+                <span aria-hidden="true" className="text-sky-700">
                   0{i + 1} ↗
                 </span>
               </button>
@@ -133,14 +133,14 @@ export default function HomePage() {
         <Container>
           <div className="flex items-end justify-between gap-5">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[.2em] text-sky-600">
+              <p className="text-sm font-bold uppercase tracking-[.2em] text-sky-700">
                 {t("nav.creations")}
               </p>
               <h2 className="mt-3 text-3xl font-black md:text-4xl">
                 {t("home.creations.title")}
               </h2>
             </div>
-            <Link to="/creations" className="font-bold text-sky-600">
+            <Link to="/creations" className="font-bold text-sky-700">
               {t("common.viewAll")} →
             </Link>
           </div>
@@ -155,7 +155,7 @@ export default function HomePage() {
                   variant={item.visualVariant}
                 />
                 <div className="p-6">
-                  <p className="text-xs font-bold uppercase text-sky-600">
+                  <p className="text-xs font-bold uppercase text-sky-700">
                     {t(`spaces.${item.category}.name`)}
                   </p>
                   <h3 className="mt-2 text-xl font-bold">
@@ -176,7 +176,7 @@ export default function HomePage() {
           <ol className="mt-10 grid gap-5 md:grid-cols-5">
             {[1, 2, 3, 4, 5].map((n) => (
               <li key={n} className="rounded-2xl bg-white p-5 shadow-sm">
-                <span className="text-sm font-black text-sky-500">0{n}</span>
+                <span className="text-sm font-black text-sky-700">0{n}</span>
                 <p className="mt-4 font-bold">{t(`home.process.step${n}`)}</p>
               </li>
             ))}
@@ -190,7 +190,7 @@ export default function HomePage() {
             <ul className="mt-8 space-y-4">
               {[1, 2, 3, 4, 5].map((n) => (
                 <li key={n} className="flex gap-3 text-base leading-7">
-                  <span className="text-sky-500">✓</span>
+                  <span className="text-sky-700">✓</span>
                   {t(`home.why.item${n}`)}
                 </li>
               ))}
@@ -221,7 +221,7 @@ export default function HomePage() {
           </p>
           <Link
             to="/contact?category=unsure"
-            className="mt-8 inline-block rounded-xl bg-slate-950 px-7 py-3 font-bold text-white"
+            className="mt-8 inline-block rounded-xl bg-slate-950 px-7 py-3 font-bold text-white focus-visible:outline-slate-950"
           >
             {t("home.final.cta")}
           </Link>

@@ -253,14 +253,20 @@ export function PangkreasCoreVisual({
           <g className="pangkreas-core-visual__packets">
             <circle
               className="pangkreas-core-visual__packet packet-one"
+              cx="275"
+              cy="230"
               r="4"
             />
             <circle
               className="pangkreas-core-visual__packet packet-two"
+              cx="369"
+              cy="226"
               r="4"
             />
             <circle
               className="pangkreas-core-visual__packet packet-three"
+              cx="347"
+              cy="349"
               r="4"
             />
           </g>

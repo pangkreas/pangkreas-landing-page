@@ -1,5 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("/fonts/inter-latin.woff2") format("woff2");
+}
 
 :root {
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
@@ -13,7 +20,7 @@ html {
 }
 
 :focus-visible {
-  outline: 3px solid #38bdf8;
+  outline: 3px solid var(--color-sky-700);
   outline-offset: 3px;
 }
 ::selection {

@@ -41,7 +41,7 @@ export default function ProcessPage() {
         <div className="mt-12 text-center">
           <Link
             to="/contact"
-            className="inline-flex min-h-11 items-center rounded-xl bg-sky-500 px-6 py-3 font-bold text-white hover:bg-sky-600"
+            className="inline-flex min-h-11 items-center rounded-xl bg-sky-700 px-6 py-3 font-bold text-white hover:bg-sky-800"
           >
             {t("home.final.cta")}
           </Link>

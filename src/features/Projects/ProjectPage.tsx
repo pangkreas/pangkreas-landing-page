@@ -45,7 +45,7 @@ export default function ProjectPage() {
               aria-pressed={filter === key}
               key={key}
               onClick={() => setFilter(key as "all" | SpaceKey)}
-              className="inline-flex min-h-11 items-center rounded-full border border-slate-300 px-4 py-2 text-base font-bold hover:border-sky-400 aria-pressed:border-sky-500 aria-pressed:bg-sky-500 aria-pressed:text-white"
+              className="inline-flex min-h-11 items-center rounded-full border border-slate-300 px-4 py-2 text-base font-bold hover:border-sky-400 aria-pressed:border-sky-700 aria-pressed:bg-sky-700 aria-pressed:text-white"
             >
               {key === "all" ? t("common.all") : t(`spaces.${key}.name`)}
             </button>

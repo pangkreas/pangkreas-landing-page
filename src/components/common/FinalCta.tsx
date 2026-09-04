@@ -20,7 +20,7 @@ export default function FinalCta() {
         </p>
         <Link
           to="/contact?category=unsure"
-          className="mt-8 inline-flex min-h-11 items-center justify-center rounded-xl bg-slate-950 px-6 py-3 font-bold text-white transition-transform hover:-translate-y-0.5"
+          className="mt-8 inline-flex min-h-11 items-center justify-center rounded-xl bg-slate-950 px-6 py-3 font-bold text-white transition-transform hover:-translate-y-0.5 focus-visible:outline-slate-950"
         >
           {t("finalCta.button")}
         </Link>

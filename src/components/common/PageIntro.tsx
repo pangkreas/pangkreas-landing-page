@@ -15,7 +15,7 @@ export default function PageIntro({
         className="absolute -right-12 top-1/2 h-40 w-40 -translate-y-1/2 rotate-12 rounded-[32%] border-[20px] border-sky-200/40 sm:right-10 sm:h-56 sm:w-56"
       />
       <Container className="relative">
-        <p className="mb-4 text-sm font-bold uppercase tracking-[.2em] text-sky-600">
+        <p className="mb-4 text-sm font-bold uppercase tracking-[.2em] text-sky-700">
           {eyebrow}
         </p>
         <h1 className="max-w-4xl text-4xl font-black leading-[1.08] tracking-tight text-slate-950 sm:text-5xl md:text-6xl">
