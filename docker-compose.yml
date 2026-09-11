@@ -1,0 +1,13 @@
+version: '3.9'
+
+services: 
+  frontend:
+    image: ghcr.io/pangkreas/pangkreas-landing-page:latest
+    container_name: pangkreas-landing-page
+    restart: unless-stopped
+    networks:
+      - npm_network
+
+networks:
+  npm_network:
+    external: true
